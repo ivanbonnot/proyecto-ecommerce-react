@@ -1,11 +1,11 @@
 import React from "react";
 import '../ItemListContainer/ItemListContainer.css'
 
-export function Greeting(props) {
+export function ItemListContainer(props) {
     return (
         <>
             <section>
-                <h2>Hola {props.name}</h2>
+                <h2>Hola {props.greeting}</h2>
             </section>
         </>
     )

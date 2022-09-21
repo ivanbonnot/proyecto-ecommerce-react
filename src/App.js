@@ -1,13 +1,13 @@
 import './App.css';
 import React from 'react';
 import NavBar from './components/Navbar/NavBar';
-import { Greeting } from './components/ItemListContainer/ItemListContainer'
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
 
 function App() {
     return (
         <>
             <NavBar />
-            <Greeting name="Iván" />
+            <ItemListContainer greeting="Iván" />
         </>
     )
 }
