@@ -42,6 +42,7 @@ function NavBar() {
 
 export default NavBar;
 
+// Usar extension de vs vscode-styled-components
 const NavContainer = styled.nav`
   position: fixed;
   background-color: #222;

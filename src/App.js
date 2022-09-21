@@ -1,15 +1,15 @@
 import './App.css';
 import React from 'react';
-import  NavBar  from './components/Navbar/NavBar';
-import { Greetings } from './components/ItemListContainer/ItemListContainer'
+import NavBar from './components/Navbar/NavBar';
+import { Greeting } from './components/ItemListContainer/ItemListContainer'
 
 function App() {
-return (
-    <>
-    <NavBar />
-    <Greetings />
-    </>
- )  
+    return (
+        <>
+            <NavBar />
+            <Greeting name="Iván" />
+        </>
+    )
 }
 
 export default App;
