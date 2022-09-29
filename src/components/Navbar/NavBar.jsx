@@ -32,7 +32,7 @@ function NavBar() {
             <BurguerButton />
           </div>
           <div>
-            <Cart/>
+            <Cart />
           </div>
         </div>
       </NavContainer>
