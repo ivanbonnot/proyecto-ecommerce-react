@@ -3,6 +3,8 @@ import { Item } from "../ItemDetailContainer/ItemDetailContainer";
 import '../ItemListContainer/ItemListContainer.css'
 import creality3dEnder3Pro from '../../assets/Creality3dEnder3Pro.jpg'
 
+//https://www.mockachino.com/spaces/a2b81ae8-6185-4b
+
 const cards = [
     {
         id: 1,
@@ -39,13 +41,11 @@ export function ItemListContainer() {
                                 < Item image={card.image}
                                     title={card.title}
                                     description={card.description}
-                                    
                                 />
                                 {console.log(JSON.stringify(card))}
                             </div>
                         ))
                     }
-
                 </div>
             </div>
         </>
