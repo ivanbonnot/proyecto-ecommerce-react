@@ -2,12 +2,15 @@ import './App.css';
 import React from 'react';
 import NavBar from './components/Navbar/NavBar';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
     return (
         <>
             <NavBar />
-            <ItemListContainer greeting="Iván" />
+            <div className='item-container'>
+                <ItemListContainer />
+            </div>
         </>
     )
 }
