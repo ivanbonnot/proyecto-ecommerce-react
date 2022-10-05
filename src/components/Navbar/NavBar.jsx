@@ -1,4 +1,7 @@
 import React from "react";
+
+import { Link } from 'react-router-dom';
+
 import styled from "styled-components";
 import Cart from "../CartWidget/CartWidget";
 import BurguerButton from "./BurguerButton";
@@ -10,7 +13,7 @@ function NavBar() {
       <NavContainer>
         <div className="container">
           <h1 className="logo">
-            <a href="/">Planeta 3D</a>
+            <Link to={'/'}>Planeta 3D</Link>
           </h1>
           <ul>
             <li>
@@ -19,7 +22,7 @@ function NavBar() {
               </a>
             </li>
             <li>
-              <a href="/">Productos</a>
+              <Link to={'/products'}>Productos</Link>
             </li>
             <li>
               <a href="/">Servicios</a>

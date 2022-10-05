@@ -1,6 +1,9 @@
+#root {
+  height: 110vh;
+}
+
 body {
   background-color: rgb(241, 241, 241) !important;
-  height: 100vh;
 }
 
 .item-container {
