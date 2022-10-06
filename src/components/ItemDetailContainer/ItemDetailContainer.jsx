@@ -15,7 +15,7 @@ export function ItemDetailContainer() {
         const getProd = new Promise(resolve => {
             setTimeout(() => {
                 resolve(list)
-            }, 3000)
+            }, 1000)
         });
 
         getProd.then(res => setProduct(res.find((prod) => prod.id === Number(id))));
@@ -23,22 +23,23 @@ export function ItemDetailContainer() {
 
     return (
         <>
-            {
-                list.map(prod => (
-                    <>
-                        <div className="card text-center bg-dark">
-                            <img src={prod.image} alt="" className="card-img-top" />
-                            <div className="card-body text-light">
-                                <h4 className="card-title">{prod.title}</h4>
-                                <p className="card-text">{prod.description}</p>
-
-                                <Link to={`/products`}> Atrás </Link>
-
-                            </div>
+            <div className="container d-flex mt-5 h-100 align-items-center">
+                <div className="row">
+                    <div className="col-md-4">
+                    <div className="card text-center bg-dark">
+                        <img src={product.image} alt="" className="card-img-top" />
+                        <div className="card-body text-light">
+                            <h4 className="card-title">{product.title}</h4>
+                            <p className="card-text">{product.description}</p>
+                            <Link to={`/products`}> Atrás </Link>
                         </div>
-                    </>
-                ))
-            }
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+           
         </>
     )
 }

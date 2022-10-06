@@ -8,7 +8,7 @@ function Home() {
     return (
         <>
             <Welc>
-                <h2>Entrar a productos en el navbar</h2>
+                <h2>Entrar a Productos en el navbar</h2>
             </Welc>
         </>
     )
