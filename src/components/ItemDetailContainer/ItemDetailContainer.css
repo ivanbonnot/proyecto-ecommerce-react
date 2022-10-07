@@ -1,0 +1,13 @@
+.container {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.spinner {
+    width: 100vw;
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(80, 80, 80, 0.555) !important;
+}

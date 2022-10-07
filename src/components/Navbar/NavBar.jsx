@@ -17,19 +17,15 @@ function NavBar() {
           </h1>
           <ul>
             <li>
-              <a href="/">
-                Acerca de
-              </a>
+              <Link to={'/category/1'}>Impresoras</Link>
             </li>
             <li>
-              <Link to={'/products'}>Productos</Link>
+              <Link to={'/category/2'}>Filamentos</Link>
             </li>
             <li>
-              <a href="/">Servicios</a>
+              <Link to={'/'}>Productos</Link>
             </li>
-            <li>
-              <a href="/">Contacto</a>
-            </li>
+            
           </ul>
           <div className="burguer">
             <BurguerButton />

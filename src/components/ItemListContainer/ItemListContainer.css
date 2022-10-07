@@ -1,0 +1,9 @@
+
+.spinner {
+    width: 100vw;
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(80, 80, 80, 0.555) !important;
+}
