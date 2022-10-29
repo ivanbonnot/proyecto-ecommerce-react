@@ -8,7 +8,8 @@ import NavBar from './components/Navbar/NavBar';
 //import Home from './routes/Home/Home';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
-import { Cart } from './components/Cart/Cart'
+import  Cart  from './components/Cart/Cart'
+import  { Brief }  from './components/Brief/Brief'
 import { CartProvider } from './context/CartContext';
 
 
@@ -23,6 +24,7 @@ function App() {
           <Route exact path="/category/:categoryid" element={<ItemListContainer />} />
           <Route exact path="/item/:id" element={<ItemDetailContainer />} />
           <Route exact path='/cart' element={<Cart />} />
+          <Route exact path='/brief' element={<Brief />} />
         </Routes>
       </CartProvider>
     </BrowserRouter>

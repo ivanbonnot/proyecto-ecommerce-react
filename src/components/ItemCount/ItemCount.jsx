@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Link } from "react-router-dom";
-import './Counter.css'
+import './ItemCount.css'
 
 
-const Counter = ({ initial, stock, onAdd }) => {
+const ItemCount = ({ initial, stock, onAdd }) => {
   const [counter, setCounter] = useState(initial);
 
   const Sumar = () => {
@@ -17,6 +17,7 @@ const Counter = ({ initial, stock, onAdd }) => {
   return (
 
     <div className='count'>
+      <p>Stock: {stock}</p>
       <button disabled={counter <= 1} onClick={Restar}>-</button>
       <span>{counter}</span>
       <button disabled={counter >= stock} onClick={Sumar}>+</button>
@@ -30,4 +31,4 @@ const Counter = ({ initial, stock, onAdd }) => {
   );
 };
 
-export default Counter;
+export default ItemCount;

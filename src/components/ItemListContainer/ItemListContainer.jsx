@@ -3,38 +3,40 @@ import Spinner from '../Spinner/Spinner';
 import { Cards } from '../Cards/Cards';
 
 import '../ItemListContainer/ItemListContainer.css'
-import { list } from './list'
 import { useParams } from 'react-router-dom';
+import { db } from '../../firebase/firebase';
+import { getDocs, collection, query, where } from 'firebase/firestore'
 
-
-//https://www.mockachino.com/spaces/a2b81ae8-6185-4b
 
 
 export function ItemListContainer() {
 
   const [products, setProducts] = useState([]);
   const { categoryid } = useParams();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const getProd = new Promise(resolve => {
-      setTimeout(() => {
-        resolve(list)
-      }, 1500)
-    });
-    if (categoryid) {
-      getProd.then(res =>
-        setProducts(res.filter((products) => products.categoryid === Number(categoryid))));
-    } else {
-      getProd.then(res => setProducts(res));
-    }
+    const consulta = categoryid
+      ? query(collection(db, 'items'), where('categoryid', '==', categoryid))
+      : collection(db, 'items');
 
-
-
+    getDocs(consulta)
+      .then(result => {
+        const lista = result.docs.map(doc => {
+          return {
+            id: doc.id,
+            ...doc.data()
+          }
+        })
+        setProducts(lista);
+      })
+      .catch(error => (error))
+      .finally(() => setLoading(false))
   }, [categoryid])
 
   return (
     <>
-      {products.length === 0 ? (
+      {loading ? (
         <div className='spinner'>
           <Spinner />
         </div>
@@ -47,7 +49,7 @@ export function ItemListContainer() {
                   <div className="col-md-4" key={product.id}>
                     < Cards image={product.image}
                       title={product.title}
-                      description={product.description}
+                      description={product.descriptionShort}
                       id={product.id}
                     />
                   </div>
