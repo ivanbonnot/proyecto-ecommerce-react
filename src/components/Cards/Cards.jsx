@@ -14,7 +14,7 @@ export function Cards({ image, title, description, id }) {
                     <h4 className="card-title">{title}</h4>
                     <p className="card-text">{description}</p>
 
-                    <Link to={`/item/${id}`}> Ver más </Link>
+                    <button><Link to={`/item/${id}`}> Ver más </Link></button>
 
                 </div>
             </div>

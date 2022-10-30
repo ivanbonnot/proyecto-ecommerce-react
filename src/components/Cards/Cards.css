@@ -3,7 +3,7 @@
 .card:hover {
     box-shadow: 2px 5px 10px 1px black !important;
     transition: all 0.3s ease-in-out;
-    cursor: pointer;
+    cursor: default;
 }
 
 .card-body {

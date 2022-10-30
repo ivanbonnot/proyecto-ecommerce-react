@@ -7,3 +7,7 @@
     align-items: center;
     background-color: rgba(80, 80, 80, 0.555) !important;
 }
+
+.col-md-4 {
+    margin-top: 10px;
+}

@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { CartContext } from '../../context/CartContext';
 import { db } from '../../firebase/firebase';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { collection, doc, addDoc, updateDoc, serverTimestamp } from 'firebase/firestore';
 import { Link } from 'react-router-dom';
 import Spinner from "../Spinner/Spinner";
 import '../Brief/Brief.css'
@@ -30,10 +30,24 @@ export const Brief = () => {
 
     const generarPedido = async (data) => {
         try {
+            msjerror('Su orden se está procesando', 'green')
             const col = collection(db, 'ordenes')
             const order = await addDoc(col, data)
+            
+            //Actualizando stcok en firebase
+            const productos = data.items.map(item => {
+                const idProd = item.id
+                const stockRef = doc(db, 'items', idProd)
+                const stock = productosCarrito.map(prod => { return { stock: prod.stock } })
+                const newStock = {
+                    stock: (stock[0].stock - item.Cantidad).toString()
+                }
+                updateDoc(stockRef, newStock)
+            })
+
             setIdOrden(order.id)
             clear()
+
 
         } catch (error) {
             return (
@@ -46,24 +60,25 @@ export const Brief = () => {
         e.preventDefault()
 
         if (Nombre === '' || Apellido === '' || Telefono === '' || Email === '') {
-            msjerror('Todos los compos son obligatorios')
+            msjerror('Todos los compos son obligatorios', 'red')
 
         } else if (Email !== EmailComp) {
-            msjerror('La dirección de mail debe coincidir')
+            msjerror('La dirección de mail debe coincidir', 'red')
 
         } else {
             const dia = serverTimestamp()
-            const items = productosCarrito.map(e => { return { id: e.id, Titulo: e.title, Precio: e.price } })
             const total = totalCompra()
+            const items = productosCarrito.map(prod => { return { id: prod.id, Titulo: prod.title, Precio: prod.price, Cantidad: prod.quantity } })
             const data = { buyer, dia, items, total }
             generarPedido(data)
         }
     }
 
-    const msjerror = (mensaje) => {
+    const msjerror = (mensaje, color) => {
         const button = document.querySelector('.send')
         const comprobar = document.createElement('p')
         comprobar.classList.add('comprobacion')
+        comprobar.style.border = `2px solid ${color}`
         comprobar.innerHTML = `${mensaje}`
         formCont.appendChild(comprobar)
         button.disabled = true

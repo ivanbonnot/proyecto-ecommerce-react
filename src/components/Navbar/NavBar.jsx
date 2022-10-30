@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import styled from "styled-components";
 import Cart from "../CartWidget/CartWidget";
-import BurguerButton from "./BurguerButton";
+
 
 
 function NavBar() {
@@ -27,9 +27,7 @@ function NavBar() {
             </li>
             
           </ul>
-          <div className="burguer">
-            <BurguerButton />
-          </div>
+          
           <div>
             <Cart />
           </div>
@@ -77,8 +75,7 @@ const NavContainer = styled.nav`
 
   a.current,
   a:hover {
-    color: #c0392b;
-    font-weight: bold;
+    color: rgb(131, 247, 131);
   }
 
   .burguer {
