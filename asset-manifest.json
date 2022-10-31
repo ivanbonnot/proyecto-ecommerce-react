@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ivanbonnot.github.io/proyecto-ecommerce-react/static/css/main.628d273c.css",
-    "main.js": "/ivanbonnot.github.io/proyecto-ecommerce-react/static/js/main.64e0ad86.js",
-    "static/js/787.382436ac.chunk.js": "/ivanbonnot.github.io/proyecto-ecommerce-react/static/js/787.382436ac.chunk.js",
-    "index.html": "/ivanbonnot.github.io/proyecto-ecommerce-react/index.html",
-    "main.628d273c.css.map": "/ivanbonnot.github.io/proyecto-ecommerce-react/static/css/main.628d273c.css.map",
-    "main.64e0ad86.js.map": "/ivanbonnot.github.io/proyecto-ecommerce-react/static/js/main.64e0ad86.js.map",
-    "787.382436ac.chunk.js.map": "/ivanbonnot.github.io/proyecto-ecommerce-react/static/js/787.382436ac.chunk.js.map"
+    "main.css": "/proyecto-ecommerce-react/static/css/main.628d273c.css",
+    "main.js": "/proyecto-ecommerce-react/static/js/main.ea8243da.js",
+    "static/js/787.382436ac.chunk.js": "/proyecto-ecommerce-react/static/js/787.382436ac.chunk.js",
+    "index.html": "/proyecto-ecommerce-react/index.html",
+    "main.628d273c.css.map": "/proyecto-ecommerce-react/static/css/main.628d273c.css.map",
+    "main.ea8243da.js.map": "/proyecto-ecommerce-react/static/js/main.ea8243da.js.map",
+    "787.382436ac.chunk.js.map": "/proyecto-ecommerce-react/static/js/787.382436ac.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.628d273c.css",
-    "static/js/main.64e0ad86.js"
+    "static/js/main.ea8243da.js"
   ]
 }
