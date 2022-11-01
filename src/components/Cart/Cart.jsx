@@ -12,7 +12,7 @@ const Cart = () => {
             {productosCarrito.length === 0 ?
                 <div className="noProduct">
                     <h3> ¡Tu carrito está vacío! </h3>
-                    <button><Link to="/">Ir a compras</Link></button>
+                    <button><Link to="proyecto-ecommerce-react/">Ir a compras</Link></button>
                 </div>
                 : <div className="product">
                     <h1 > Detalle de su carrito  </h1> {productosCarrito.map(item =>
