@@ -136,7 +136,7 @@ export const Brief = () => {
                             <p >{`Su codigo de operacion es: ${idOrden}`}</p>
                             <p >{`Le enviarenos a ${Email} la factura electronica de su compra`}</p>
                             <div>
-                                <button><Link to={'/'}>Realizar otra compra</Link></button>
+                                <button><Link to={'proyecto-ecommerce-react/'}>Realizar otra compra</Link></button>
                             </div>
                         </div>
                     )

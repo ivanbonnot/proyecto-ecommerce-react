@@ -12,7 +12,7 @@ function Cart() {
     return (
         <>
             <div className="container">
-                <Link to={'/cart'}>
+                <Link to={'proyecto-ecommerce-react/cart'}>
                     <img className="carrito" src="/proyecto-ecommerce-react/img/carrito.png" alt="cart" />
                 </Link>
                 {cantidadCompra >= 1 ? <span className="cantidadCompra">{cantidadCompra}</span> : null}

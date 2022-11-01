@@ -10,17 +10,17 @@ function NavBar() {
       <NavContainer>
         <div className="container">
           <h1 className="logo">
-            <Link to={'/'}>Planeta 3D</Link>
+            <Link to={'proyecto-ecommerce-react/'}>Planeta 3D</Link>
           </h1>
           <ul>
             <li>
-              <Link to={'/category/1'}>Impresoras</Link>
+              <Link to={'proyecto-ecommerce-react/category/1'}>Impresoras</Link>
             </li>
             <li>
-              <Link to={'/category/2'}>Filamentos</Link>
+              <Link to={'proyecto-ecommerce-react/category/2'}>Filamentos</Link>
             </li>
             <li>
-              <Link to={'/'}>Productos</Link>
+              <Link to={'proyecto-ecommerce-react/'}>Productos</Link>
             </li>
             
           </ul>

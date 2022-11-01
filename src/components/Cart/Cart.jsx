@@ -26,7 +26,7 @@ const Cart = () => {
                         </div>
                     )}
                     <div className="total">Total Compra: $ {totalCompra()}</div>
-                    <button className="buy"> <Link to={'/brief'}>Finalizar compra</Link></button>
+                    <button className="buy"> <Link to={'proyecto-ecommerce-react/brief'}>Finalizar compra</Link></button>
                     <button className="clear" onClick={clear}> Limpiar carrito</button>
                 </div>}
         </>

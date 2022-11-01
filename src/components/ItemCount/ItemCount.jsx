@@ -27,7 +27,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
           <span>{counter}</span>
           <button className='up' disabled={counter >= stock} onClick={Sumar}>+</button>
           <div>
-            < Link to={"/cart"}>
+            < Link to={"proyecto-ecommerce-react/cart"}>
               <button className='addCart' disabled={stock <= 0} onClick={() => onAdd(counter)} >Agregar al carrito</button>
             </Link>
           </div>
