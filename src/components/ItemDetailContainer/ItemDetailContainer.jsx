@@ -56,7 +56,7 @@ export function ItemDetailContainer() {
                   <p className="card-text">{product.description}</p>
                   <p className="card-text">Precio: {product.price} USD</p>
                   <ItemCount initial={1} stock={product.stock} onAdd={onAdd} />
-                  <button><Link to={`/`} className="atras fs-4"> Atrás </Link></button>
+                  <button><Link to={`proyecto-ecommerce-react/`} className="atras fs-4"> Atrás </Link></button>
                 </div>
               </div>
             </div>
